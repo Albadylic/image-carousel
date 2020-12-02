@@ -1,0 +1,12 @@
+.carousel-image {
+  width: 45vw;
+  height: auto;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
