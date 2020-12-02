@@ -19,7 +19,7 @@ function nextImage() {
 function prevImage() {
   carouselImages[currentImage].classList.remove("visible");
   carouselImages[currentImage].classList.add("hidden");
-  carouselImage--;
+  currentImage--;
   checkLimits();
   carouselImages[currentImage].classList.add("visible");
   carouselImages[currentImage].classList.remove("hidden");
@@ -47,5 +47,9 @@ const stopCarousel = () => {
   clearInterval(carouselInterval);
 };
 
-startButton.addEventListener("click", startCarousel);
+startButton.addEventListener("click", () => {
+  startCarousel();
+});
 stopButton.addEventListener("click", stopCarousel);
+prevButton.addEventListener("click", prevImage);
+nextButton.addEventListener("click", nextImage);
